@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import ChatSidebar from "./ChatSidebar";
-import ChatMain from "./ChatMain";
+import ChatSidebar from "./ChatSidebarComponents/ChatSidebar";
+import ChatMain from "./ChatMainComponents/ChatMain";
 
 const Chat = () => {
   const [activeChat, setActiveChat] = useState(null);
@@ -13,15 +13,10 @@ const Chat = () => {
     <div className="flex justify-center items-center">
       <div className="border border-neutral-300 rounded-3xl my-10 h-[700px] mx-16 min-w-[1000px] w-full flex overflow-hidden">
         {/* Left Side Chat History And Create Chat */}
-        <ChatSidebar 
-          activeChat={activeChat} 
-          onSelectChat={handleSelectChat} 
-        />
-        
+        <ChatSidebar activeChat={activeChat} onSelectChat={handleSelectChat} />
+
         {/* Right Side Messages and send message */}
-        <ChatMain 
-          activeChat={activeChat} 
-        />
+        <ChatMain activeChat={activeChat} />
       </div>
     </div>
   );

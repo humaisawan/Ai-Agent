@@ -2,7 +2,10 @@ import React, { useEffect, useState } from "react";
 import { PlusCircle } from "lucide-react";
 import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
-import { setConversations, addConversation } from "../redux/slices/conversationSlice";
+import {
+  setConversations,
+  addConversation,
+} from "../../redux/slices/conversationSlice";
 import ChatItem from "./ChatItem";
 import CreateChatModal from "./CreateChatModal";
 
